@@ -21,10 +21,17 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				<configuration>
-					<forkCount>0</forkCount>
-					<suiteXmlFiles>
+					
+					<fork>0</fork>
+                	<suiteXmlFiles>
 						<suiteXmlFile>./XMLFiles/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
+					
+					<systemPropertyVariables>
+						<executionBrowserName>${browserName} </executionBrowserName>	
+						<appURL>${appURL} </appURL>
+					</systemPropertyVariables>
+					
 				</configuration>
 			</plugin>
 		</plugins>

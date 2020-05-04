@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.automation.pages.BaseClass;
@@ -14,8 +15,12 @@ import com.automation.pages.LoginPage;
 public class LoginTestCRM extends BaseClass {
 		
 	@Test
-	public void loginApp()
+	@Parameters({"browserName","appURL","xmlFileName"})
+	public void loginApp(String bName, String aName, String xName)
 	{
+		System.out.println("---> BrowserName: "+bName);
+		System.out.println("---> App URL: "+aName);
+		System.out.println("---> XML Name: "+xName);
 		
 		logger = report.createTest("Login to App");
 				
