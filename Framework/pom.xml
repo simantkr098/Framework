@@ -21,7 +21,10 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				<configuration>
+<<<<<<< HEAD
 					
+=======
+>>>>>>> branch 'master' of https://github.com/simantkr098/Framework.git
 					<fork>0</fork>
                 	<suiteXmlFiles>
 						<suiteXmlFile>./XMLFiles/testng.xml</suiteXmlFile>
