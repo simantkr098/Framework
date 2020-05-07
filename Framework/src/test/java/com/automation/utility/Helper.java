@@ -14,13 +14,15 @@ public class Helper {
 	
 	public static String captureScreenshot(WebDriver driver)
 	{
-		String screenshotPath=System.getProperty("user.dir")+"/Screenshots/screenshotAt_"+getCurrentDate()+".png";
+//		String screenshotPath=System.getProperty("user.dir")+"\\Screenshots\\screenshotAt_"+getCurrentDate()+".png";
+		
+		String screenshotPath="screenshotAt_"+getCurrentDate()+".png";
 		
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
 		try
 		{
-			FileHelper.copyFile(src, new File(screenshotPath));
+			FileHelper.copyFile(src, new File("./Reports/screenshots/"+screenshotPath));
 		}
 		catch (Exception e)
 		{

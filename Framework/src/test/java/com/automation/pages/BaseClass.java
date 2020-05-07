@@ -35,7 +35,8 @@ public class BaseClass {
 		excel= new ExcelDataProvider("./TestData/MasterData.xlsx");
 		config = new ConfigDataProvider();
 	
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/Login_"+Helper.getCurrentDate()+".html"));
+		//ExtentHtmlReporter reporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/Login_"+Helper.getCurrentDate()+".html"));
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/Login.html"));
 		report = new ExtentReports();
 		report.attachReporter(reporter);
 		
@@ -57,13 +58,14 @@ public class BaseClass {
 	@AfterMethod
 	public void tearDownMethod(ITestResult result) throws IOException
 	{
+		String screenshotPath = "./screenshots/"+Helper.captureScreenshot(driver);
 		if(result.getStatus()==ITestResult.FAILURE)
 		{
-			logger.fail("Test Failed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
+			logger.fail("Test Failed", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
 		}
 		else if(result.getStatus()==ITestResult.SUCCESS)
 		{
-			logger.pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
+			logger.pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
 		}
 		
 		report.flush();
