@@ -36,7 +36,7 @@ public class BaseClass {
 		config = new ConfigDataProvider();
 	
 		//ExtentHtmlReporter reporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/Login_"+Helper.getCurrentDate()+".html"));
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/Login.html"));
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/Login_"+Helper.getCurrentDate()+".html"));
 		report = new ExtentReports();
 		report.attachReporter(reporter);
 		

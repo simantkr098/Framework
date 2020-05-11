@@ -32,7 +32,7 @@
 						<appURL>${appURL} </appURL>
 					</systemPropertyVariables>
 				</configuration>
-			
+			 
 			</plugin>
 		</plugins>
 	</build>
