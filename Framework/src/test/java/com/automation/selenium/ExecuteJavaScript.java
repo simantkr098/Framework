@@ -12,6 +12,7 @@ import com.automation.pages.BaseClass;
 
 
 
+@SuppressWarnings("unused")
 public class ExecuteJavaScript extends BaseClass {
 	
 	
