@@ -17,7 +17,7 @@ Our main intention to use Implicit wait in selenium is to instruct Webdriver tha
 Note- Implicit wait in selenium webdriver will be applicable throughout your script and will works on all element in the script once your specified implicit wait.
  
 
-Syntax of Implicit wait in selenium webdriver
+Syntax of Implicit wait in Selenium webdriver
 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 Seconds, Minutes, Days, Hours, Microsecond, Milliseconds and so on check below screenshot for more information.
@@ -28,17 +28,17 @@ Page load timeout in Selenium
 Script load timeout in Selenium
 
 *********************************************************************************************************************************************************
-Explicit wait in Selenium
-***************************************************
+Explicit Wait in Selenium
+******************************************************************************************************
 It is a concept of the dynamic wait which wait dynamically for specific conditions. It can be implemented by WebDriverWait class.
  
-Syntax of Explicit wait in selenium webdriver
+Syntax of Explicit wait in Selenium Webdriver
 
 // Create object of WebDriverWait class
 WebDriverWait wait=new WebDriverWait(driver,20);
 
 // Wait till the element is not visible
-WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("ur xpath here")));
+WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("your xpath here")));
 
 Implicit wait– It only checks the presence of element on WebPage that’s all if elements are hidden or any other condition then it will not handle and it will fail your script.
 It is applicable for all the element after initialization.
@@ -46,8 +46,8 @@ It is applicable for all the element after initialization.
 Explicit wait– It has so much capability which we already discussed and it is applicable to the specific element.
 
 *********************************************************************************************************************************************************
-Fluent wait in Selenium
-***************************************************
+Fluent Wait in Selenium
+******************************************************************************************************
 
 https://www.toolsqa.com/selenium-webdriver/advance-webdriver-waits/
 
